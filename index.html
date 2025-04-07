@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
+<div class="logo">  
     <h1>
         MegaMart
     </h1>
+</div>
+<div class="header">
     <h2>
         Your Complete Shoping Destination
     </h2>
+</div>
+<div class="nav-bar">
     <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Electronics</a></li>
@@ -20,18 +27,21 @@
         <li><a href="#">Cart</a></li>
         <li><a href="#">Contact</a></li>
     </ul>
+</div>
+<main>        
+<div class="Search">
     <h2>
         Product Search
     </h2>
-    <form>
         <input type="search" placeholder="Search over 10000">
-        <input type="submit" value="search">
-    </form>
+        <input type="submit" value="search" id="button">
+</div>    
     <h2>
         Featured Product
     </h2>
+<div class="Product">
     <table border="2" width="850">
-        <tr>
+        <tr id="pdp">
             <th>Product</th>
             <th>Description</th>
             <th>Price</th>
@@ -49,7 +59,7 @@
             </td>
             <td><del>!99,99</del><br><ins>149,99</ins></td>
             <td>In Stock</td>
-            <td><input type="submit" value="Add to Cart"><br>Available quanities:15</td>
+            <td><button class="atc">Add to Cart</button><br>Available quanities:15</td>
         </tr>
         <tr>    
         </tr>
@@ -66,52 +76,51 @@
             </td>
             <td>$89,99</td>
             <td>Low Stock</td>
-            <td><input type="submit" value="Add to Cart"></td>
+            <td><button class="atc">Add to Cart</button></td>
         </tr>
     </table>
+</div>
     <h2>
         Creat New Account
     </h2>
-    <fieldset>
+<div class="Account">
+    <fieldset class="fieldset">
         <legend>
             Personal Infpormation
         </legend>
-        <form action="#">
-            <p>First Name:<input type="text"></p>
-            <p>Last Name: <input type="text"></p>
-            <p>Date of Birth <input type="date"></p>
-            <p>Gender:Male<input type="radio" name="Gender">
-            Female <input type="radio" name="Gender"></p>
-        </form>
+    <form action="#">
+            <label for="F-name">First Name:<input type="text" id="F-name" required></label>
+            <label for="L-name">Last Name: <input type="text" id="L-name" required></label>
+            <label for="dob">Date of Birth <input type="date" id="dob" required></label>
+            Gender: <label for="Male"> Male</label><input type="radio" name="Gender" id="Male">
+            <label for="Female">Female</label> <input type="radio" name="Gender" id="Female">
     </fieldset>
     <fieldset>
         <legend>
             Account Details 
         </legend>
-        <form action="#">
-            Email: <input type="email">
-            Password: <input type="password" min="6" max="12">
-            Phone Number: <input type="tel" maxlength="10">
-            Subscribe to Newslatter: <input type="checkbox"> 
-        </form> 
+            <label for="email">Email:</label> <input type="email" id="email" required>
+            <label for="password">Password:</label> <input type="password" min="6" max="12" id="password" required>
+            <label for="Phone">Phone Number:</label> <input type="tel" maxlength="10" id="Phone" required>
+            <label for="Subscribe">Subscribe to Newslatter:</label> <input type="checkbox" id="Subscribe" required> 
     </fieldset>
     <fieldset>
         <legend>
             Shipping Address
         </legend>
-        <form action="#">
-            Streat Address: <textarea name="" id=""></textarea>
-            Country: <input type="text">
-            Zip Code: <input type="text">
-        </form>
+           <label for="address"> Streat Address:</label> <textarea id="address" required></textarea>
+            <label for="Country">Country:</label> <input type="text" id="Country" required>
+            <label for="Zip">Zip Code:</label> <input type="text" id="Zip" required>
     </fieldset>
-    <form action="#">
-        <input type="submit" value="Create Account">
-        <input type="submit" value="Clear form">
+        <input type="submit" value="Create Account" id="Account">
+        <input type="reset" value="Clear form">
     </form>
+</div>
+<div class="Comparison">
     <h2>
         Product Comparison
     </h2>
+    <div class="c-table">
     <table border="2" width="500">
         <tr>
             <th>Feature</th>
@@ -140,22 +149,26 @@
             <td colspan="4"><ul><li>All prices include VAT</li></ul></td>
         </tr>
     </table>
+    </div>
+</div>
+<div class="Checkout">    
     <h2>
         Checkout Process
     </h2>
+    <div class="Payment">
     <fieldset>
         <legend>
             Payment Information
         </legend>
         <form action="#">
-            Card Type: <input type="radio" name="Card Type">Visa
-            <input type="radio" name="Card Type">MsaterCard
-            <input type="radio" name="Card Type">American Express
+            Card Type: <input type="radio" name="Card-Type" id="Visa" required><label for="Visa">Visa<label>
+            <input type="radio" name="Card-Type" id="MsaterCard" required><label for="MsaterCard">MsaterCard</label>
+            <input type="radio" name="Card-Type" id="American" required><label for="American">American Express</label>
             <br>
-            Card Number: <input type="number">
-            Expiry Date: <input type="date">
-        </form>
+            <label for="Card Number">Card Number:</label><input type="number" id="Card" required>
+            <label for="exp-date">Expiry Date:</label><input type="date" id="exp-date" required>
     </fieldset>
+    <div class="Oder">
     <fieldset>
         <legend>
             Oder Summary
@@ -182,34 +195,58 @@
             </tr>
         </table>
     </fieldset>
-    <form action="">
+    </div>
         <input type="submit" value="Complete Purchase">
     </form>
+    </div>
+</div>
+</main>
+<section>
+<div class="Product-v">
     <h2>
         Product Vdieo
     </h2>
-    <video src="video and audio/videoplayback.mp4"></video>
+    <div class="video">
+    <video src="video and audio/videoplayback.mp4" controls></video>
+    </div>
+    <div class="audio">
     <h3>Product Audio Description</h3>
     <audio src="video and audio/Best Smartwatch Under 5000 in India  Top 5 Premium Smartwatches For Men and Women.mp3" controls></audio>
-    <h2>
+  </div>
+</div>
+<div class="Contact">
+    <h2 class="address">
         Contact US
     </h2>
+    <div class="address">
     <address>
          <p>Email: <a href="mailto:minhalali3000@gmail.com">minhalali3000@gmail.com</a></p>
          <p>Phone: <a href="tell:+92696996">+92696996</a></p>
          <p>Address: 123 Commarce Street New York NY 001</p>
     </address>     
+    </div>
     <p>Here is our Location</p>
      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.9162798669704!2d67.19435371866378!3d24.866708810026278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb331004a2aa071%3A0xf2e132e72edf7754!2sSMIT%20Malir%20Campus!5e0!3m2!1sen!2s!4v1743804577136!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <p>Checkout latest video</p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Y9L6bj2rr_w?si=cdeeh_5etBNCyjyn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</section>
+<footer>
+    <div class="Quick">
     <h3>Quick Links</h3>
+    <div class="Terms"> 
     <ul>
          <li><a href="#">Terms of Service</a></li>
           <li><a href="#">Privacy Policy</a></li>
          <li><a href="#">Return policy</a></li>
    </ul>
+   </div>
+   <div class="rights">
    <p>&copy; 2023 MegaMart. All rights Reserved. </p>
    <p>Follow us  on <a href="index.html" target="_blank">Social Media</a></p>
+   </div>
+   </div>
+</footer>
+</header>
 </body>
 </html>

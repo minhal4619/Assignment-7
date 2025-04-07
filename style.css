@@ -1,0 +1,49 @@
+.logo{ 
+    background-color: skyblue;
+    border-bottom: 2px solid blue;
+}
+.nav-bar ul{
+    background-color: blue;
+}
+ul li a{
+    color: white;
+}
+.Search{
+    background-color: rgb(189, 127, 45);
+}
+#button{
+    background-color: orange;
+}
+.Product table{
+    border: 2px solid green;
+}
+#pdp{
+    background-color: green;
+}
+.atc{ 
+    background-color: green;
+}
+.Account fieldset{
+    border: 2px solid purple;
+}
+.Account legend{
+    background-color: rgb(223, 39, 223);
+}
+#Account{
+    background-color: rgb(209, 36, 209);
+}
+.c-table table{
+    border: 2px solid red;
+}
+.c-table table tr th{
+    background-color: red;
+}
+.Payment fieldset{
+    border: 2px solid rgb(0, 48, 95);
+}
+.address{
+    background-color: gray;
+}
+.Contact address{
+    /* background-color: grey; */
+}
